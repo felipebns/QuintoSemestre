@@ -1,0 +1,3 @@
+Numeros pares entram em recursão infinita, subtraindo numeros pares de 2 em 2 nunca da 1
+
+Adicionando um condição se n <= 0

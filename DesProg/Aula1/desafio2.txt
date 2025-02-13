@@ -1,0 +1,1 @@
+Sim, depende do arredondamento do float, se ele arredondar para baixo é possível
