@@ -1,0 +1,115 @@
+Questão 1
+
+Considere a função abaixo.
+
+int lawrence(int n) {
+    if (n == 256) {
+        printf("b: %d\n", n);
+        return n;
+    }
+    printf("%d {\n", n);
+    int r = lawrence(4 * n) / 2;
+    printf("} %d\n", r);
+    return r;
+}
+Escreva a saída de lawrence(1), usando as regras de indentação dadas na Aula 1. Elas não correspondem à realidade, mas tornam a resposta mais clara.
+
+Questão 2
+
+Considere a função abaixo.
+
+int bellini(int n) {
+    if (n == 1) {
+        printf("b: %d\n", n);
+        return n;
+    }
+    printf("%d {\n", n);
+    int r = bellini(n - 2) + bellini(n - 2);
+    printf("} %d\n", r);
+    return r;
+}
+Escreva a saída de bellini(7), usando as mesmas regras de indentação.
+
+Questão 3
+
+Considere a função abaixo.
+
+int trembley(int n) {
+    if (n >= 5) {
+        printf("b: %d\n", n);
+        return n;
+    }
+    printf("%d {\n", n);
+    int r = trembley(2 * n) / 3 + trembley(3 * n) / 2;
+    printf("} %d\n", r);
+    return r;
+}
+Escreva a saída de trembley(1), usando as mesmas regras de indentação.
+
+Questão 4
+
+Escreva uma função recursiva que recebe um inteiro não-negativo n e devolve o número mínimo de bits necessários para representar n em binário. Por exemplo:
+
+se recebe 1, então devolve 1, pois no mínimo um bit é necessário (1);
+
+se recebe 3, então devolve 2, pois no mínimo dois bits são necessários (11);
+
+se recebe 5, então devolve 3, pois no mínimo três bits são necessários (101).
+
+Dicas:
+
+Primeiro, pense em quais números podem ser representados por um bit. Depois, pense em quais números podem ser representados por dois bits. Depois, em quais podem ser representados por três. Perceba o padrão.
+
+Depois de perceber, pense: qual é a operação que transforma um número representável por 
+ bits em um número representável por 
+ bits?
+
+Questão 5
+
+Escreva uma função recursiva que recebe
+
+um vetor v de inteiros;
+
+um inteiro n que representa o tamanho de v
+
+e transforma esse vetor em sua derivada discreta, ou seja:
+
+substitui v[0] por v[0] - v[1]; (considerando os valores originais de v[0] e v[1])
+
+substitui v[1] por v[1] - v[2]; (considerando os valores originais de v[1] e v[2])
+
+substitui v[2] por v[2] - v[3] (considerando os valores originais de v[2] e v[3])
+
+e assim em diante. A única exceção é v[n-1], que permanece inalterado.
+
+Desconsidere o caso em que o vetor é vazio.
+
+Atenção
+
+Essa função deve modificar o vetor recebido. Ela não pode devolver nada.
+
+Questão 6
+
+Escreva uma função recursiva que recebe
+
+um vetor v de inteiros;
+
+dois inteiros, l e r, que representam respectivamente o índice inicial (inclusive) e o índice final (inclusve) de um intervalo desse vetor
+
+e devolve a diferença entre a quantidade de números positivos e a quantidade de números negativos nesse intervalo. Por exemplo:
+
+se o intervalo é [1], então devolve 1, pois há 1 positivo e 0 negativos.
+
+se o intervalo é [-2], então devolve -1, pois há 0 positivos e 1 negativo.
+
+se o intervalo é [3, -4], então devolve 0, pois há 1 positivo e 1 negativo.
+
+se o intervalo é [-5, 6], então devolve 0, pois há 1 positivo e 1 negativo.
+
+se o intervalo é [7, -8, 9], então devolve 1, pois há 2 positivos e 1 negativo.
+
+se o intervalo é [-10, 11, -12], então devolve -1, pois há 1 positivo e 2 negativos.
+
+Considere o caso em que o intervalo é vazio.
+
+Lembre que zero não é positivo nem negativo.

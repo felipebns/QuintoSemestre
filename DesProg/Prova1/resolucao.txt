@@ -1,0 +1,94 @@
+Resposta 1
+----------
+
+1 {
+    4 {
+        16 {
+            64 {
+                b: 256
+            } 128
+        } 64
+    } 32
+} 16
+
+Resposta 2
+----------
+
+7 {
+    5 {
+        3 {
+            b: 1
+            b: 1
+        } 2
+        3 {
+            b: 1
+            b: 1
+        } 2
+    } 4
+    5 {
+        3 {
+            b: 1
+            b: 1
+        } 2
+        3 {
+            b: 1
+            b: 1
+        } 2
+    } 4
+} 8
+
+Resposta 3
+----------
+
+1 {
+    2 { 
+        4 {
+            b: 8
+            b: 12
+        } 8
+        b: 6
+    } 5
+    3 {
+        b: 6
+        b: 9
+    } 6
+} 4
+
+Resposta 4
+----------
+
+int num_bits(int n) {
+    if (n <= 1){
+        return 1;
+    }
+
+    return num_bits((int) n/2) + 1;
+}
+
+Resposta 5
+----------
+
+void derivada(int v[], int n) {
+    if (n == 1){
+        return;
+    }
+    derivada(v, n-1);
+    v[n-2] = v[n-2] - v[n-1];
+}
+
+Resposta 6
+----------
+
+int diferenca(int v[], int l, int r) {
+    if (r < l) {
+        return 0;
+    }
+    
+    if (v[r] < 0){
+        return diferenca(v, l, r-1) - 1;
+    } else if (v[r] > 0){
+        return diferenca(v, l, r-1) + 1;
+    } else if (v[r] == 0){
+        return diferenca(v, l, r-1);
+    }
+}

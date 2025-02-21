@@ -1,0 +1,21 @@
+12 {
+    6 {
+        3 {
+            b: 1
+            b: 1
+        } 5 
+        2 {
+            b: 1
+            b: 0
+        } 3
+    } 21
+    4 {
+        2 {
+            b: 1
+            b: 0
+        } 3
+        b: 1
+    } 11
+} 85
+
+//FIZ AO CONTRARIO, DAR PRIORIDADE A FUNCAO DA ESQUERDA !!!
